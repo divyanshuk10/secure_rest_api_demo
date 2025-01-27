@@ -62,4 +62,9 @@ public class EmployeeController {
         employeeRepository.deleteById(id);
     }
 
+    @GetMapping("/totalCount")
+    public int totalCount(){
+        return employeeRepository.findAll().size();
+    }
+
 }
